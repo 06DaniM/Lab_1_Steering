@@ -1,6 +1,95 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-5815623130585420149
+--- !u!114 &-8622914956295254811
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dd922ae02c94c87a66e46a10a7319b9, type: 3}
+  m_Name: Thief Blackboard
+  m_EditorClassIdentifier: Unity.Behavior.Authoring::Unity.Behavior.BehaviorBlackboardAuthoringAsset
+  AssetID:
+    m_Value0: 0
+    m_Value1: 0
+  m_Variables:
+  - rid: 6538029328835805258
+  - rid: 6538029328835805328
+  - rid: 6538029328835805336
+  - rid: 6538029328835805346
+  - rid: 6538029328835805358
+  - rid: 6538029328835805372
+  m_VersionTimestamp: 639291506936520514
+  m_CommandBuffer:
+    m_Commands: []
+  m_RuntimeBlackboardAsset: {fileID: -4860315384580147134}
+  references:
+    version: 2
+    RefIds:
+    - rid: 6538029328835805258
+      type: {class: 'TypedVariableModel`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        ID:
+          m_Value0: 1
+          m_Value1: 0
+        Name: Self
+        IsExposed: 1
+        m_IsShared: 0
+        m_Value: {fileID: 0}
+    - rid: 6538029328835805328
+      type: {class: 'TypedVariableModel`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        ID:
+          m_Value0: 3795468152404368817
+          m_Value1: 11535545540000040793
+        Name: Cop
+        IsExposed: 1
+        m_IsShared: 0
+        m_Value: {fileID: 0}
+    - rid: 6538029328835805336
+      type: {class: 'TypedVariableModel`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        ID:
+          m_Value0: 17872727308848165120
+          m_Value1: 13932816925013311535
+        Name: Treasure
+        IsExposed: 1
+        m_IsShared: 0
+        m_Value: {fileID: 0}
+    - rid: 6538029328835805346
+      type: {class: 'TypedVariableModel`1[[System.Collections.Generic.List`1[[UnityEngine.GameObject, UnityEngine.CoreModule]], mscorlib]]', ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        ID:
+          m_Value0: 12367691365119346731
+          m_Value1: 8495771355043039045
+        Name: Hide Points
+        IsExposed: 1
+        m_IsShared: 0
+        m_Value: []
+    - rid: 6538029328835805358
+      type: {class: 'TypedVariableModel`1[[System.Boolean, mscorlib]]', ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        ID:
+          m_Value0: 651421737177091618
+          m_Value1: 7120963607717388296
+        Name: Has Treasure
+        IsExposed: 1
+        m_IsShared: 0
+        m_Value: 0
+    - rid: 6538029328835805372
+      type: {class: 'TypedVariableModel`1[[System.Single, mscorlib]]', ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        ID:
+          m_Value0: 9396260956273540495
+          m_Value1: 9419880800667456949
+        Name: Danger Radius
+        IsExposed: 1
+        m_IsShared: 0
+        m_Value: 0
+--- !u!114 &-4860315384580147134
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -12,18 +101,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c02bb70996b49eba31d0c206e28da24, type: 3}
   m_Name: Thief Blackboard
   m_EditorClassIdentifier: Unity.Behavior::Unity.Behavior.RuntimeBlackboardAsset
-  VersionTimestamp: 639283585249588742
+  VersionTimestamp: 639291506936520514
   AssetID:
     m_Value0: 0
     m_Value1: 0
   m_Blackboard:
     m_Variables:
-    - rid: 2531138970683179198
+    - rid: 6538029328835805259
+    - rid: 6538029328835805329
+    - rid: 6538029328835805337
+    - rid: 6538029328835805347
+    - rid: 6538029328835805359
+    - rid: 6538029328835805373
   m_SharedBlackboardVariableGuids: []
   references:
     version: 2
     RefIds:
-    - rid: 2531138970683179198
+    - rid: 6538029328835805259
       type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         GUID:
@@ -31,86 +125,46 @@ MonoBehaviour:
           m_Value1: 0
         Name: Self
         m_Value: {fileID: 0}
---- !u!114 &-4743593905456230076
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b27bb6d9a2c8d540a10dff10acc543e, type: 3}
-  m_Name: Thief Debug Info
-  m_EditorClassIdentifier: Unity.Behavior::Unity.Behavior.BehaviorGraphDebugInfo
-  m_CodeBreakPointsList: []
---- !u!114 &-4315154619615168748
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db920e62f70f420bb33c771449926fa4, type: 3}
-  m_Name: Thief
-  m_EditorClassIdentifier: Unity.Behavior::Unity.Behavior.BehaviorGraph
-  Graphs:
-  - rid: 2531138970683179199
-  m_DebugInfo: {fileID: -4743593905456230076}
-  m_WasCompileWithPlaceholderNode: 0
-  references:
-    version: 2
-    RefIds:
-    - rid: -2
-      type: {class: , ns: , asm: }
-    - rid: 2531138970683179199
-      type: {class: BehaviorGraphModule, ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        AuthoringAssetID:
-          m_Value0: 6109412974038114553
-          m_Value1: 13177553011997907528
-        m_DebugInfo: {fileID: -4743593905456230076}
-        BlackboardReference:
-          rid: 2531138970683179200
-        BlackboardGroupReferences: []
-        Root:
-          rid: 2531138970683179201
-        m_VersionTimestamp: 639283585249716226
-    - rid: 2531138970683179200
-      type: {class: BlackboardReference, ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        m_Blackboard:
-          rid: 2531138970683179202
-        m_Source: {fileID: -5815623130585420149}
-    - rid: 2531138970683179201
-      type: {class: Start, ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        ID:
-          m_Value0: 9251068662969709015
-          m_Value1: 5580493543356002879
-        Graph:
-          rid: 2531138970683179199
-        m_Parent:
-          rid: -2
-        m_Child:
-          rid: -2
-        Repeat: 1
-        AllowMultipleRepeatsPerTick: 0
-    - rid: 2531138970683179202
-      type: {class: Blackboard, ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        m_Variables:
-        - rid: 2531138970683179203
-    - rid: 2531138970683179203
+    - rid: 6538029328835805329
       type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         GUID:
-          m_Value0: 1
-          m_Value1: 0
-        Name: Self
+          m_Value0: 3795468152404368817
+          m_Value1: 11535545540000040793
+        Name: Cop
         m_Value: {fileID: 0}
+    - rid: 6538029328835805337
+      type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 17872727308848165120
+          m_Value1: 13932816925013311535
+        Name: Treasure
+        m_Value: {fileID: 0}
+    - rid: 6538029328835805347
+      type: {class: 'BlackboardVariable`1[[System.Collections.Generic.List`1[[UnityEngine.GameObject, UnityEngine.CoreModule]], mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 12367691365119346731
+          m_Value1: 8495771355043039045
+        Name: Hide Points
+        m_Value: []
+    - rid: 6538029328835805359
+      type: {class: 'BlackboardVariable`1[[System.Boolean, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 651421737177091618
+          m_Value1: 7120963607717388296
+        Name: Has Treasure
+        m_Value: 0
+    - rid: 6538029328835805373
+      type: {class: 'BlackboardVariable`1[[System.Single, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 9396260956273540495
+          m_Value1: 9419880800667456949
+        Name: Danger Radius
+        m_Value: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -123,14 +177,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bad8f2220607dac4db5082ff333fafb8, type: 3}
   m_Name: Thief
   m_EditorClassIdentifier: Unity.Behavior.Authoring::Unity.Behavior.BehaviorAuthoringGraph
-  Blackboard: {fileID: 2141878504313597848}
+  Blackboard: {fileID: -8622914956295254811}
   m_Description: 
   m_Nodes:
-  - rid: 2531138970683179204
-  m_VersionTimestamp: 639283585249716226
+  - rid: 6538029328835805260
+  m_VersionTimestamp: 639291506937124554
   m_SerializedVersion: 3
-  m_DebugInfo: {fileID: -4743593905456230076}
-  m_RuntimeGraph: {fileID: -4315154619615168748}
+  m_DebugInfo: {fileID: 6447813566796025632}
+  m_RuntimeGraph: {fileID: 5485566871709113118}
   AssetID:
     m_Value0: 6109412974038114553
     m_Value1: 13177553011997907528
@@ -150,7 +204,7 @@ MonoBehaviour:
     NamedChildren: []
     IsPlaceholder: 0
   m_Blackboards: []
-  m_MainBlackboardAuthoringAsset: {fileID: 2141878504313597848}
+  m_MainBlackboardAuthoringAsset: {fileID: -8622914956295254811}
   m_CommandBuffer:
     m_Commands: []
   m_SubgraphsInfo: []
@@ -162,16 +216,16 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
-    - rid: 2531138970683179204
+    - rid: 6538029328835805260
       type: {class: StartNodeModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
       data:
         Position: {x: 0, y: 0}
         ID:
-          m_Value0: 9251068662969709015
-          m_Value1: 5580493543356002879
+          m_Value0: 6183758937451951062
+          m_Value1: 8830726179124412355
         Parents: []
         PortModels:
-        - rid: 2531138970683179205
+        - rid: 6538029328835805261
         NodeType:
           m_SerializableType: Unity.Behavior.Start, Unity.Behavior, Version=0.0.0.0,
             Culture=neutral, PublicKeyToken=null
@@ -181,46 +235,137 @@ MonoBehaviour:
         m_FieldValues: []
         Repeat: 1
         AllowMultipleRepeatsPerTick: 0
-    - rid: 2531138970683179205
+    - rid: 6538029328835805261
       type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
       data:
         m_Name: OutputPort
         m_PortDataFlowType: 1
         m_IsFloating: 0
         m_NodeModel:
-          rid: 2531138970683179204
+          rid: 6538029328835805260
         m_Connections: []
---- !u!114 &2141878504313597848
+--- !u!114 &5485566871709113118
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dd922ae02c94c87a66e46a10a7319b9, type: 3}
-  m_Name: Thief Blackboard
-  m_EditorClassIdentifier: Unity.Behavior.Authoring::Unity.Behavior.BehaviorBlackboardAuthoringAsset
-  AssetID:
-    m_Value0: 0
-    m_Value1: 0
-  m_Variables:
-  - rid: 2531138970683179206
-  m_VersionTimestamp: 639283585249588742
-  m_CommandBuffer:
-    m_Commands: []
-  m_RuntimeBlackboardAsset: {fileID: -5815623130585420149}
+  m_Script: {fileID: 11500000, guid: db920e62f70f420bb33c771449926fa4, type: 3}
+  m_Name: Thief
+  m_EditorClassIdentifier: Unity.Behavior::Unity.Behavior.BehaviorGraph
+  Graphs:
+  - rid: 6538029328835805262
+  m_DebugInfo: {fileID: 6447813566796025632}
+  m_WasCompileWithPlaceholderNode: 0
   references:
     version: 2
     RefIds:
-    - rid: 2531138970683179206
-      type: {class: 'TypedVariableModel`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+    - rid: -2
+      type: {class: , ns: , asm: }
+    - rid: 6538029328835805262
+      type: {class: BehaviorGraphModule, ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        AuthoringAssetID:
+          m_Value0: 6109412974038114553
+          m_Value1: 13177553011997907528
+        m_DebugInfo: {fileID: 6447813566796025632}
+        BlackboardReference:
+          rid: 6538029328835805263
+        BlackboardGroupReferences: []
+        Root:
+          rid: 6538029328835805381
+        m_VersionTimestamp: 639291506937124554
+    - rid: 6538029328835805263
+      type: {class: BlackboardReference, ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        m_Blackboard:
+          rid: 6538029328835805265
+        m_Source: {fileID: -4860315384580147134}
+    - rid: 6538029328835805265
+      type: {class: Blackboard, ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        m_Variables:
+        - rid: 6538029328835805382
+        - rid: 6538029328835805383
+        - rid: 6538029328835805384
+        - rid: 6538029328835805385
+        - rid: 6538029328835805386
+        - rid: 6538029328835805387
+    - rid: 6538029328835805381
+      type: {class: Start, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         ID:
+          m_Value0: 6183758937451951062
+          m_Value1: 8830726179124412355
+        Graph:
+          rid: 6538029328835805262
+        m_Parent:
+          rid: -2
+        m_Child:
+          rid: -2
+        Repeat: 1
+        AllowMultipleRepeatsPerTick: 0
+    - rid: 6538029328835805382
+      type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
           m_Value0: 1
           m_Value1: 0
         Name: Self
-        IsExposed: 1
-        m_IsShared: 0
         m_Value: {fileID: 0}
+    - rid: 6538029328835805383
+      type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 3795468152404368817
+          m_Value1: 11535545540000040793
+        Name: Cop
+        m_Value: {fileID: 0}
+    - rid: 6538029328835805384
+      type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 17872727308848165120
+          m_Value1: 13932816925013311535
+        Name: Treasure
+        m_Value: {fileID: 0}
+    - rid: 6538029328835805385
+      type: {class: 'BlackboardVariable`1[[System.Collections.Generic.List`1[[UnityEngine.GameObject, UnityEngine.CoreModule]], mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 12367691365119346731
+          m_Value1: 8495771355043039045
+        Name: Hide Points
+        m_Value: []
+    - rid: 6538029328835805386
+      type: {class: 'BlackboardVariable`1[[System.Boolean, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 651421737177091618
+          m_Value1: 7120963607717388296
+        Name: Has Treasure
+        m_Value: 0
+    - rid: 6538029328835805387
+      type: {class: 'BlackboardVariable`1[[System.Single, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 9396260956273540495
+          m_Value1: 9419880800667456949
+        Name: Danger Radius
+        m_Value: 0
+--- !u!114 &6447813566796025632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b27bb6d9a2c8d540a10dff10acc543e, type: 3}
+  m_Name: Thief Debug Info
+  m_EditorClassIdentifier: Unity.Behavior::Unity.Behavior.BehaviorGraphDebugInfo
+  m_CodeBreakPointsList: []

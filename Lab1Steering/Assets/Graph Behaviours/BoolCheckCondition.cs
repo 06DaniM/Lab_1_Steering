@@ -3,9 +3,10 @@ using Unity.Behavior;
 using UnityEngine;
 
 [Serializable, Unity.Properties.GeneratePropertyBag]
-[Condition(name: "Bool check", story: "Is a bool true?", category: "Conditions", id: "18c8442e51791b0a5d0c204953a9b8b4")]
+[Condition(name: "Bool check", story: "if [x]", category: "Conditions", id: "13dc219e10b55f52c9b461da43942852")]
 public partial class BoolCheckCondition : Condition
 {
+    [SerializeReference] public BlackboardVariable<bool> X;
 
     public override bool IsTrue()
     {
